@@ -11,20 +11,20 @@ Wanderlust is a modern vacation rental platform that connects travelers with uni
 - ✅ Responsive & user-friendly design
 
 ## Installation:
-Clone the repository: ```sh
+Clone the repository:  
 ``` git clone https://github.com/Yash-Atkari/Wanderlust.git ```
-Install dependencies:
-npm install
-Start the server:
-node app.js
+Install dependencies:  
+``` npm install ```
+Start the server:  
+``` node app.js ```
 
 ## Tech Stack:
-Frontend: EJS, HTML, CSS, Bootstrap
-Backend: Node.js, Express.js
-Database: MongoDB (Mongoose ODM)
-Authentication: Passport.js (OAuth, Local Strategy)
-Templating Engine: EJS
-Architecture: MVC (Model-View-Controller)
+- Frontend: EJS, HTML, CSS, Bootstrap
+- Backend: Node.js, Express.js
+- Database: MongoDB (Mongoose ODM)
+- Authentication: Passport.js (OAuth, Local Strategy)
+- Templating Engine: EJS
+-  Architecture: MVC (Model-View-Controller)
 
 ## Contributing:
 We welcome contributions! Feel free to fork the repo, create a new branch, and submit a pull request.
