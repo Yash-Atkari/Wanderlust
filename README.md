@@ -12,11 +12,11 @@ Wanderlust is a modern vacation rental platform that connects travelers with uni
 
 ## Installation:
 Clone the repository:  
-``` git clone https://github.com/Yash-Atkari/Wanderlust.git ```
+``` git clone https://github.com/Yash-Atkari/Wanderlust.git ```  
 Install dependencies:  
-``` npm install ```
+``` npm install ```  
 Start the server:  
-``` node app.js ```
+``` node app.js ```  
 
 ## Tech Stack:
 - Frontend: EJS, HTML, CSS, Bootstrap
