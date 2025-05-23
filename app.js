@@ -29,9 +29,9 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-const dbUrl = process.env.ATLASDB_URL;
+// const dbUrl = process.env.ATLASDB_URL;
 
-// const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
@@ -41,28 +41,28 @@ main()
         console.log(err);
     });
 
-async function main() {
-    await mongoose.connect(dbUrl);
-}
-
 // async function main() {
-//     await mongoose.connect(MongoUrl);
+//     await mongoose.connect(dbUrl);
 // }
 
-const store = MongoStore.create({
-    mongoUrl: dbUrl,
-    crypto: {
-        secret: process.env.SECRET,
-    },
-    touchAfter: 24 * 3600,
-});
+async function main() {
+    await mongoose.connect(MongoUrl);
+}
 
-store.on("error", () => {
-    console.log("ERROR in MONGO SESSION STORE");
-});
+// const store = MongoStore.create({
+//     mongoUrl: dbUrl,
+//     crypto: {
+//         secret: process.env.SECRET,
+//     },
+//     touchAfter: 24 * 3600,
+// });
+
+// store.on("error", () => {
+//     console.log("ERROR in MONGO SESSION STORE");
+// });
 
 const sessionOptions = {
-    store,
+    // store,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
