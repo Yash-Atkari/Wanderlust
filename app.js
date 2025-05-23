@@ -45,9 +45,9 @@ async function main() {
     await mongoose.connect(dbUrl);
 }
 
-async function main() {
-    await mongoose.connect(MongoUrl);
-}
+// async function main() {
+//     await mongoose.connect(MongoUrl);
+// }
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
