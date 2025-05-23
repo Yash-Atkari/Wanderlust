@@ -31,6 +31,8 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 const dbUrl = process.env.ATLASDB_URL;
 
+// const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+
 main()
     .then(() => {
         console.log("Connected to DB");
@@ -42,6 +44,10 @@ main()
 async function main() {
     await mongoose.connect(dbUrl);
 }
+
+// async function main() {
+//     await mongoose.connect(MongoUrl);
+// }
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
@@ -67,10 +73,6 @@ const sessionOptions = {
     }
 };
 
-// app.get("/", (req, res) => {
-//     res.send("Hi I am root")
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -92,6 +94,10 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+app.use("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 });
@@ -102,6 +108,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", { message });
 });
 
-app.listen(8080, () => {
-    console.log("server is listening to port 8080");
+app.listen(8000, () => {
+    console.log("Server listening on http://localhost:8000/");
 });
