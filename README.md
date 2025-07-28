@@ -73,3 +73,6 @@ SESSION_SECRET=your_session_secret
 npm start
 ```
 The backend will run on: `http://localhost:xxxx`
+
+# License
+This project is licensed under the MIT License.
