@@ -38,6 +38,16 @@ Wanderlust is a full-stack web application inspired by Airbnb, designed to help 
 -  Book Properties with Availability Dates
 -  Dashboard for Managing Listings and Bookings
 
+## Screenshots
+
+<img width="1919" height="915" alt="image" src="https://github.com/user-attachments/assets/e4c5d6ad-c64c-4953-b0d3-abfe24ef71d9" />
+
+<img width="1899" height="909" alt="image" src="https://github.com/user-attachments/assets/38eb6482-9036-4f3d-9ee0-4ac56324a762" />
+
+<img width="1901" height="913" alt="image" src="https://github.com/user-attachments/assets/12e42914-a1fb-4b2e-a1c3-133519d61bfc" />
+
+<img width="1903" height="912" alt="image" src="https://github.com/user-attachments/assets/f3cd0e0d-4c0b-400a-828f-2e5bb4d658a4" />
+
 ## Installation & Setup
 
 ### 1. Clone the Repository
