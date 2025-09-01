@@ -62,17 +62,19 @@ body {
 /* Cards */
 .card {
     border: none;
+    border-radius: 1rem !important;
     margin-bottom: 2rem;
 }
 
 .card-img-top {
-    border-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
 
 .card-body {
-    padding: 0 !important;
+    padding: 1rem !important;
 }
 
 .card-text p {

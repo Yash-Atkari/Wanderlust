@@ -29,9 +29,9 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-const dbUrl = process.env.ATLASDB_URL;
+// const MongoUrl = process.env.ATLASDB_URL;
 
-// const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
@@ -42,15 +42,11 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(MongoUrl);
 }
 
-// async function main() {
-//     await mongoose.connect(MongoUrl);
-// }
-
 const store = MongoStore.create({
-    mongoUrl: dbUrl,
+    mongoUrl: MongoUrl,
     crypto: {
         secret: process.env.SECRET,
     },
