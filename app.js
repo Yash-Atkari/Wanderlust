@@ -42,7 +42,10 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(MongoUrl);
+    await mongoose.connect(process.env.ATLASDB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        })
 }
 
 const store = MongoStore.create({
