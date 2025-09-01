@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { type } = require("os");
-const Review = require("./review");
+const Review = require("./Review");
 const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({

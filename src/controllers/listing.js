@@ -1,4 +1,4 @@
-const Listing = require("../models/listing.js");
+const Listing = require("../models/Listing.js");
 const mongoose = require("mongoose");
 
 module.exports.index = async (req, res) => {
