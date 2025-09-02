@@ -29,9 +29,9 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-// const MongoUrl = process.env.ATLASDB_URL;
+const MongoUrl = process.env.ATLASDB_URL;
 
-const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+// const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
