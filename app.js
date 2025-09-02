@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-const ExpressError = require("./src/utils/ExpressError.js");
+const ExpressError = require("./src/utils/expressError.js");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
@@ -29,9 +29,9 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-const MongoUrl = process.env.ATLASDB_URL;
+// const MongoUrl = process.env.ATLASDB_URL;
 
-// const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
+const MongoUrl = "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
@@ -105,4 +105,4 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => console.log(`http://localhost:${port}/`));
