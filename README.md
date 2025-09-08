@@ -1,10 +1,11 @@
-# Wanderlust – A Travel Booking Platform
+# Wanderlust – Travel Booking Platform
 
 Wanderlust is a full-stack web application inspired by Airbnb, designed to help users explore and book unique accommodations around the world. It supports features like user authentication, property listings, booking system, and review functionality.
 
-## Deployed Link
+## Live Links
 
-[View Wanderlust](https://airbnb-clone-1-2et5.onrender.com/)
+- [View Wanderlust](https://airbnb-clone-1-2et5.onrender.com/)
+- [View Demo Video on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7370389942713151488/)
 
 ## Tech Stack
 
@@ -30,7 +31,7 @@ Wanderlust is a full-stack web application inspired by Airbnb, designed to help 
 
 ## Features
 
--  User Authentication (Register/Login/Logout)
+-  User Authentication/Authorization (Register/Login/Logout)
 -  Add, Edit, and Delete Property Listings
 -  Location-based Listings
 -  Upload Multiple Property Images
